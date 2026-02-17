@@ -1,0 +1,29 @@
+{
+  "address": "Av. Central Cardenal Raúl Silva Henríquez 6554, 9140070 Lo Espejo, Región Metropolitana.",
+  "youtubeUrl": "https://www.youtube.com/@avenidacentralnorte",
+  "heroTitle": "Estamos expectantes por todo lo que Dios está haciendo. ¡Te esperamos!",
+  "scheduleText": "Domingo 10:30 · Miércoles 19:30",
+  "social": [
+    { "label": "▶ YouTube", "url": "https://youtube.com/@avenidacentralnorte" },
+    { "label": "📸 Instagram", "url": "https://www.instagram.com/avenidacentralnorte" },
+    { "label": "👍 Facebook", "url": "https://www.facebook.com/share/16tNKZxy2Y/" }
+  ],
+  "events": [
+    {
+      "badge": "Juventud 2026",
+      "title": "Campamento Juvenil – Marcados x Dios",
+      "desc": "VI Región · Sector Llavería",
+      "date": "26, 27 y 28 de Febrero 2026",
+      "place": "Sector Llavería",
+      "image": "img/campamento-juvenil-2026.jpg"
+    },
+    {
+      "badge": "IFA",
+      "title": "Convención nacional e internacional",
+      "desc": "Templo principal",
+      "date": "Sábado 15 de Marzo · 20:00",
+      "place": "ACN",
+      "image": "img/logo-acn.png"
+    }
+  ]
+}

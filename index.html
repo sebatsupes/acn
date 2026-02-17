@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACN | IFA</title>
+  <meta name="description" content="Iglesia Avenida Central Norte (ACN) - Corporación IFA. Noticias, eventos y transmisiones en vivo." />
+
+  <!-- Anti-cache suave (útil en dev, pero lo fuerte lo arregla el SW) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo-acn.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/logo-acn.png">
+  <link rel="apple-touch-icon" href="img/logo-acn.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0b1220">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="img/logo-ifa.png" alt="Logo Iglesia ACN" class="brand__logo-img">
+        <span class="brand__text">
+          <span class="brand__name">Avenida Central Norte</span>
+          <span class="brand__sub">IFA</span>
+        </span>
+      </a>
+
+      <!-- Nav escritorio -->
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#en-vivo">En vivo</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contacto">Contacto</a>
+
+        <button class="themeBtn" id="themeToggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+          <span class="themeBtn__icon" aria-hidden="true">🌙</span>
+          <span class="themeBtn__text">Modo</span>
+        </button>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        ☰
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div class="mobileNav container" id="mobileNav" hidden>
+      <a href="#en-vivo">🔴 En vivo</a>
+      <a href="#eventos">📅 Eventos</a>
+      <a href="#contacto">📍 Contacto</a>
+      <button class="themeBtn themeBtn--mobile" id="themeToggleMobile" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="themeBtn__icon" aria-hidden="true">🌙</span>
+        <span class="themeBtn__text">Modo</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__center">
+          <span class="pill">Bienvenidos a ACN</span>
+
+          <h2 id="heroTitle">Estamos expectantes por todo lo que Dios está haciendo. ¡Te esperamos!</h2>
+
+
+          <div class="hero__quick">
+            <div class="card card--mini hero__schedule">
+              <div class="label">Cultos</div>
+              <div class="value" id="scheduleText">Domingo 10:30 · Miércoles 19:30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- En vivo -->
+    <section id="en-vivo" class="section">
+      <div class="container">
+        <div class="section__head">
+          <div class="liveHead">
+            <h2>🔴 Culto en vivo</h2>
+            <span class="liveBadge" id="liveBadge">Cargando…</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="videoWrap">
+            <iframe
+              id="liveFrame"
+              src="https://www.youtube.com/embed/gv1Yok6gtj8"
+              title="ACN - Culto en vivo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="card__footer">
+            <a class="btn btn--primary" id="btnYouTube" href="https://www.youtube.com/@avenidacentralnorte" target="_blank" rel="noreferrer">
+              Abrir en YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section id="eventos" class="section">
+      <div class="container">
+        <div class="section__head center">
+          <h2>📅 Próximos eventos</h2>
+          <p class="muted">Información oficial de nuestras actividades.</p>
+        </div>
+
+        <div class="eventsGrid" id="eventsMount"></div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>📍 Contacto</h2>
+          <p class="muted">Dirección y redes.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Dirección</h3>
+            <p class="muted" id="churchAddress">
+              Av. Central Cardenal Raúl Silva Henríquez 6554, 9140070 Lo Espejo, Región Metropolitana.
+            </p>
+
+            <div class="card__footer">
+              <a class="btn btn--ghost" id="btnOpenMap" href="#" target="_blank" rel="noreferrer">🗺️ Abrir en Maps</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Redes</h3>
+            <p class="muted">Síguenos y mantente conectado con ACN.</p>
+
+            <div class="card__footer socialRow" id="socialMount"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="muted">© 2026 ACN · IFA</span>
+        <a class="muted" href="#inicio">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+
+  <!-- Fuerza update del SW (sin borrar cache manual) -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistration().then((reg) => {
+        if (reg) reg.update();
+      });
+    }
+  </script>
+</body>
+</html>
