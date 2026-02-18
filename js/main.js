@@ -1,7 +1,7 @@
 const CONFIG = {
   YOUTUBE_API_KEY: "",
   YOUTUBE_CHANNEL_ID: "",
-  DEFAULT_VIDEO_ID: "XXYlFuWEuKI"
+  DEFAULT_VIDEO_ID: "Zv0KpDz9-oo"
 };
 
 let SITE = {
