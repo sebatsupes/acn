@@ -1,7 +1,7 @@
 const CONFIG = {
   YOUTUBE_API_KEY: "",
   YOUTUBE_CHANNEL_ID: "",
-  DEFAULT_VIDEO_ID: "kx4RTBZFAYU"
+  DEFAULT_VIDEO_ID: "XXYlFuWEuKI"
 };
 
 let SITE = {
@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadData();
   await resolveLiveOrLatest();
 });
+
 
 
 
