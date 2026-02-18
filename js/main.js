@@ -263,11 +263,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupThemeButtons();
   setupMobileMenu();
   setupButtons();
-  setupPWA();
 
   await loadData();
   await resolveLiveOrLatest();
 });
+
 
 
 
