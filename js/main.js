@@ -256,11 +256,6 @@ function setupButtons(){
   if (btnDirections) btnDirections.addEventListener("click", tryAutoDirections);
 }
 
-// PWA
-function setupPWA(){
-  if (!("serviceWorker" in navigator)) return;
-  navigator.serviceWorker.register("sw.js").catch(() => {});
-}
 
 // Init
 document.addEventListener("DOMContentLoaded", async () => {
@@ -273,5 +268,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadData();
   await resolveLiveOrLatest();
 });
+
 
 
